@@ -19,9 +19,9 @@
   #password:
   #socket: /tmp/mysql.sock
 
-development:
-  <<: *default
-  database: treco_rails_development
+#development:
+ # <<: *default
+  #database: treco_rails_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
