@@ -1,0 +1,33 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_main', :media => "all" %>
+
+<!-- コンテンツ -->
+<div id="create_account_container">
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<h1><%= image_tag 'main_logo.png',id: 'create_account_logo' %></h1>
+<h2>新規アカウント作成</h2>
+<div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",class: 'input-space',:placeholder => "ユーザー名" %>
+  </div>
+<div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'input-space',:placeholder => "メールアドレス"%>
+  </div>
+  <div class="field">
+    <% if @minimum_password_length %>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password",class: 'input-space',:placeholder => "パスワード(6文字以上)" %>
+  </div>
+<div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: 'input-space',:placeholder => "パスワード確認用" %>
+  </div>
+<div class="actions">
+    <%= f.submit "登録",id:'create-account-btn'%>
+  </div>
+<% end %>
+</div>
+</div>
+
+

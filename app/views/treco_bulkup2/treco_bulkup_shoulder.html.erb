@@ -1,0 +1,40 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_diet_reg', :media => "all" %>
+
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<div id="all_container">
+<h2 id="diet_reg_title">バルクアップ(筋肉増量)をする</h2>
+
+<h3>筋肉量を増やすためのトレーニング目安</h3>
+<p>まずは8〜12回の反復運動で限界と感じる重さに設定し、<br>
+各種目で2〜3セットのトレーニングを行ってみましょう</p>
+<h2>肩のトレーニングマシンを選択する</h2>
+<ul id="diet_reg_button_container">
+<!--マシンの画像を挿入して3つずつ横並びにする-->
+<li class="diet_reg_button"><%= link_to image_tag("diet_button_shoulderpress.jpg",class: 'reg_machine'),treco_bulkup2_treco_bulkup_shoulderpress_path %></li>
+<li class="diet_reg_button"><%= link_to image_tag("diet_button_pec_reardelt.jpg",class: 'reg_machine'),treco_bulkup2_treco_bulkup_reardelt_path %></li>
+
+<li class="diet_reg_button"><a href="treco_diet_.html"><img src="img/diet_button_.jpg" class="reg_machine"></a></li>
+<br>
+<li class="diet_reg_button"><a href="treco_diet_.html"><img src="img/diet_button_.jpg" class="reg_machine"></a></li>
+<li class="diet_reg_button"><a href="treco_diet_.html"><img src="img/diet_button_.jpg" class="reg_machine"></a></li>
+<li class="diet_reg_button"><a href=""><img src="img/diet_button_.jpg" class="reg_machine"></a></li>
+<br>
+<li class="diet_reg_button"><a href=""><img src="img/diet_reg_button.jpg" class="reg_machine"></a></li>
+<li class="diet_reg_button"><a href=""><img src="img/diet_reg_button.jpg" class="reg_machine"></a></li>
+<li class="diet_reg_button"><a href=""><img src="img/diet_reg_button.jpg" class="reg_machine"></a></li>
+</ul>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

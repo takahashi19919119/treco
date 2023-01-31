@@ -1,0 +1,28 @@
+<h2>TRECO パスワード変更</h2>
+
+<%= form_with model: @user, url: user_password_path, method: :patch, class: 'registration-main', local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field">
+    <%= f.label :password, "新しいパスワード" %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード再確認" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+   <%# 隠しフィールドでトークンもパラメーターで送る。こうすることでDBに保存されているリセットトークンとここから送られたトークンが一致するか確認している。 %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="actions">
+    <%= f.submit "パスワードを変更する" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

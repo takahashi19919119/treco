@@ -1,0 +1,21 @@
+<h1>登録</h1>
+<%= form_with model: @user_managements,url: treco_main_create_path do |form| %>
+  <div>
+    <%= form.label :部位 %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :種目 %>
+    <%= form.text_field :email %>
+  </div>
+  <div>
+    <%= form.label :セット数 %>
+    <%= form.text_field :password %>
+    
+    <%= form.select :password,[["a", 1],["b", 2],["c", 3]], { selected: 2 } %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

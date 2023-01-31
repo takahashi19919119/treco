@@ -1,0 +1,72 @@
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_record_list', :media => "all" %>
+
+<div id="all_container">
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+
+
+<h2>トレーニング記録一覧</h2>
+
+<%= form_with model: @tranings,local: true,url: treco_main_search_path do |form| %>
+      <h3>見たい日付を選択してください</h3>
+<%= form.date_field :created_at,class: 'item' %><br>
+<%= form.submit "確認する",id: 'check-btn' %>
+    <% end %>
+
+  <div id="record-list-container">
+<% @traning.each do |traning_records| %>
+    <table>
+      <tbody>
+          <tr>
+            <th class="record-head">日付</th>
+            <td class="record-item"><%= l traning_records.created_at %></td>
+          </tr>
+　　　　　　<tr>
+            <th class="record-head">部位・種目</th>
+            <td class="record-item"><%= traning_records.bodypart_menu %></td>
+          </tr>
+          <tr>
+            <th class="record-head">【1セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_1set %>kg・<%= traning_records.reps_1set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【2セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_2set %>kg・<%= traning_records.reps_2set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【3セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_3set %>kg・<%= traning_records.reps_3set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【4セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_4set %>kg・<%= traning_records.reps_4set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【5セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_5set %>kg・<%= traning_records.reps_5set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【6セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_6set %>kg・<%= traning_records.reps_6set %>回</td>
+          </tr>
+          <tr>
+          	<th class="record-head">【7セット目】重量・回数</th>
+            <td class="record-item"><%= traning_records.weight_7set %>kg・<%= traning_records.reps_7set %>回</td>
+          </tr>
+      </tbody>
+    </table>
+<% end %>
+</div>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

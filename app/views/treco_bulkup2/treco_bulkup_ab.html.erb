@@ -1,0 +1,35 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_diet_method', :media => "all" %>
+
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<div id="all_container">
+<h2 id="diet_title">ダイエット(脂肪燃焼)をする</h2>
+
+<h3>体を引き締めるためのトレーニング目安</h3>
+<p>15〜20回の反復運動で限界と感じる重さに設定し、<br>
+各種目で2〜3セットのトレーニングを行ってみましょう</p>
+<h2>アブダクター</h2>
+<p><%= image_tag 'diet_button_abad',class: 'machine_img' %></p>
+<h3>やり方</h3>
+<p>1. 太ももの外側にパッドが当たるように足を置く</p>
+<p>2. 胸を張る</p>
+<P>3. お尻はプリケツ</p>
+<P>4. つま先をまっすぐにする</p>
+<P>5. 太ももでパッドを開く</p>
+<p>6. 重りが下につく直前まで戻す</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nCXGH6JVVJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

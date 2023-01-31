@@ -1,0 +1,27 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_main', :media => "all" %>
+
+<div id="main2_container">
+
+<%# ログイン中のユーザー名を表示する記述 %>
+<% if user_signed_in? %>
+<p>ユーザー名：<%= current_user.name %></p>
+<% end %>
+
+<h2 class="main2_button" style="font-weight:bold;text-decoration:underline;">目的を選択してください</h2>  
+<h2 class="main2_button"><%= link_to "ダイエット 脂肪燃焼をする", treco_diet2_treco_diet_select_path  %></h2>
+<h2 class="main2_button"><%= link_to "バルクアップ 筋肉増量をする", treco_bulkup2_treco_bulkup_select_path %></h2>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

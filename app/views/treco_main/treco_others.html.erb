@@ -1,0 +1,25 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_others', :media => "all" %>
+
+<div id="all_container">    
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<h2 id="others">その他</h2>
+<ul id="others-content">
+<li class="others-item"><a class="others-item-link" href="">お問い合わせ</a></li>
+<li class="others-item"><a class="others-item-link" href="">プライバシーポリシー</a></li>
+<li class="others-item"><%= link_to 'ログアウト',destroy_user_session_path,class: 'dropdown-item',class: 'others-item-link',method: :delete %></li>
+</ul>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

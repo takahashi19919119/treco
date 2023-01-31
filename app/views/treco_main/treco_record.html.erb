@@ -1,0 +1,56 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_record', :media => "all" %>
+
+<div id="all_container">
+<div id="record-container">
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+
+<h2>トレーニング部位・種目名
+<%= form_with model: @tranings,local: true,url: treco_main_create_path do |form| %>
+<%= form.select :bodypart_menu,
+[["【太もも】45度レッグプレス", "【太もも】45度レッグプレス"],
+["【太もも】レッグプレス", "【太もも】レッグプレス"],
+["【太もも】アダクター", "【太もも】アダクター"],
+["【太もも】レッグエクステンション", "【太もも】レッグエクステンション"],
+["【太もも】ライイングレッグカール", "【太もも】ライイングレッグカール"],
+["【お尻】アブダクター", "【お尻】アブダクター"],
+["【背中】フロントラットプルダウン", "【背中】フロントラットプルダウン"],
+["【背中】バックラットプルダウン", "【背中】バックラットプルダウン"],
+["【背中】シーテッドローイング", "【背中】シーテッドローイング"],
+["【胸】チェストプレス", "【胸】チェストプレス"],
+["【胸】インクラインチェストプレス", "【胸】インクラインチェストプレス"],
+["【腕】バイセップスカール（力こぶ）", "【腕】バイセップスカール（力こぶ）"],
+["【肩】ショルダープレス", "【肩】ショルダープレス"],
+["【肩】リアデルトイドフライ", "【肩】リアデルトイドフライ"],
+["【お腹】アブドミナルクランチ", "【お腹】アブドミナルクランチ"],
+["【お腹】トーソーローテーション", "【お腹】トーソーローテーション"],
+["【お腹】デクラインシットアップベンチ", "【お腹】デクラインシットアップベンチ"]],{ prompt: false },class: 'item' %>
+</h2>
+
+<h2>セット数・重量・回数
+<p>1セット目<%= form.text_field :weight_1set,class: 'content-set' %>kg<%= form.text_field :reps_1set,class: 'content-set' %>回</p>
+<p>2セット目<%= form.text_field :weight_2set,class: 'content-set' %>kg<%= form.text_field :reps_2set,class: 'content-set' %>回</p>
+
+<p>3セット目<%= form.text_field :weight_3set,class: 'content-set' %>kg<%= form.text_field :reps_3set,class: 'content-set' %>回</p>
+<p>4セット目<%= form.text_field :weight_4set,class: 'content-set' %>kg<%= form.text_field :reps_4set,class: 'content-set' %>回</p>
+<p>5セット目<%= form.text_field :weight_5set,class: 'content-set' %>kg<%= form.text_field :reps_5set,class: 'content-set' %>回</p>
+<p>6セット目<%= form.text_field :weight_6set,class: 'content-set' %>kg<%= form.text_field :reps_6set,class: 'content-set' %>回</p>
+<p>7セット目<%= form.text_field :weight_7set,class: 'content-set' %>kg<%= form.text_field :reps_7set,class: 'content-set' %>回</p></h2>
+
+<p><%= form.submit "記録する",id: 'record-btn' %></p>
+<% end %>
+</div>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>

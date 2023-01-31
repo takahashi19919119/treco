@@ -1,0 +1,16 @@
+<h1>search</h1>
+
+<div class="item-box">  
+<% @traning.each do |latest_bodyrecord| %>
+  <div class="latest-box">
+    <table class="latest-body-data">
+      <tbody>
+          <tr>
+            <th class="latest-data">日付</th>
+            <td class="latest-value"><%= l latest_bodyrecord.created_at %></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<h1>New user management</h1>
+
+<%= render "form", user_management: @user_management %>
+
+<br>
+
+<div>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete%>
+  <!-- link_to "Back to user managements", user_managements_path -->
+  <!-- method: :delete --> 
+</div>

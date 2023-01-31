@@ -1,0 +1,30 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_record_list', :media => "all" %>
+
+
+<div id="all_container">
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<h2>トレーニング記録一覧</h2>
+
+<% @tranings.each do |traning| %>
+ <%= l traning.created_at %><br>
+ <%= traning.bodypart_menu %>
+ <%= traning.weight_1set %>
+ <%= traning.reps_1set %>
+ <%= traning.weight_2set %>
+ <%= traning.reps_2set %>
+ <%= traning.weight_3set %>
+ <%= traning.reps_3set %>
+ <%= traning.weight_4set %>
+ <%= traning.reps_4set %>
+ <%= traning.weight_5set %>
+ <%= traning.reps_5set %>
+ <%= traning.weight_6set %>
+ <%= traning.reps_6set %>
+ <%= traning.weight_7set %>
+ <%= traning.reps_7set %>
+<% end %>
+
+<!-- おそらくrubyでDBからデータを取得して、自動で一覧表示させる-->   
+</div>

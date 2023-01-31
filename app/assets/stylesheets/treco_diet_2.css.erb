@@ -1,0 +1,117 @@
+@charset;
+
+body{
+ text-align:center;
+ width:100%;
+ background-image:url(<%= asset_path 'diet_2_back.png' %>);
+ background-repeat:no-repeat;
+ background-size:cover;
+ margin:0;
+}
+
+/*グローバルナビ関連*/
+#nav-container{
+ position:fixed;
+ bottom:0;
+ width:100%;
+}
+
+#global-nav{
+ background-color:#000000;
+ margin:0;
+ opacity:0.8;
+ padding:30px;
+ z-index:1;
+ text-align:center;
+}
+
+
+.nav-item{
+ display:inline-block;
+ margin-right:60px;
+}
+
+.nav-item-icon{
+ width:20px;
+ height:auto;
+}
+
+.nav-item-link{
+ color:#FFFFFF;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+.nav-item-link:hover{
+ color:#87cefa;
+}
+
+/*戻るボタン関連*/
+#return-btn{
+ text-align:left;
+ font-weight:bold;
+ font-size:20px;
+ margin-left:10px;
+}
+
+#return-btn-link{
+ color:#000000;
+}
+
+#return-btn-link:hover{
+ opacity:0.7;
+ text-decoration:none;
+}
+
+/*トレーニング部位一覧ボタン画面関連*/
+#all_container{
+ animation-name: allcontainer-fadein;
+ animation-duration: 3s;
+ animation-timing-function: ease;
+ animation-delay: 0s;
+ animation-direction: alternate;
+ animation-fill-mode: forwards;
+ animation-iteration-count: 1;
+ opacity:0;
+ margin-bottom:70px;
+}
+
+@keyframes allcontainer-fadein {
+  0% {opacity:0;}
+  100% {opacity: 0.8;}
+}
+
+#diet_2_title{
+ text-decoration:underline;
+}
+
+#diet_2_button_container{
+ list-style:none;
+ padding:0;
+}
+
+.diet_2_button{
+margin-bottom:70px;
+display:inline-flex;
+}
+
+.diet_2_button a{
+ color:#FFFFFF;
+ text-decoration:none;
+ border:solid 1px #000000;
+ border-radius:10px;
+ background-color:#000000;
+ opacity:0.9;
+ padding-top:20px;
+ padding-bottom:20px;
+ padding-left:100px;
+ padding-right:100px;
+ font-weight:bold;
+}
+
+.diet_2_button a:hover{
+ opacity:0.6;
+}
+
+
+

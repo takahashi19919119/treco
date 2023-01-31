@@ -1,0 +1,37 @@
+
+<!-- スタイルシート -->
+<%= stylesheet_link_tag 'treco_diet_method', :media => "all" %>
+
+<p id="return-btn"><a id="return-btn-link" href=""onclick="window.history.back(); return false;">戻る</a></p>
+<div id="all_container">
+<h2 id="diet_title">バルクアップ(筋肉増量)をする</h2>
+
+<h3>筋肉量を増やすためのトレーニング目安</h3>
+<p>まずは8〜12回の反復運動で限界と感じる重さに設定し、<br>
+各種目で2〜3セットのトレーニングを行ってみましょう</p>
+<h2>ライイングレッグカール</h2>
+<p><%= image_tag 'diet_button_regcarl',class: 'machine_img' %></p>
+<h3>やり方</h3>
+<p>1. レッグカールのベンチに深く座る</p>
+<p>2. 重さを調整する</p>
+<p>3. パット部分に足を置く</p>
+<p>4. 上のパットを太ももに触れる程度まで下げる</p>
+<P>5. 両手で前または横にあるバーを軽く掴む</p>
+<P>6. つま先をまっすぐにする</p>
+<P>7. 勢いをつけず脚を下げていく</p>
+<P>8. 重りが下につく直前まで下げたら、ゆっくりと元に戻す</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mAW5MHRzVpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<nav id="nav-container">
+<ul id="global-nav">
+<li class="nav-item"><%= image_tag 'nav_home.png',class: 'nav-item-icon' %><br><%= link_to "ホーム", treco_main_treco_main_select_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_calendar.png',class: 'nav-item-icon' %><br><%= link_to "記録一覧", treco_main_treco_record_list_path,class: 'nav-item-link'  %></li>
+
+<li class="nav-item"><%= image_tag 'nav_record.png',class: 'nav-item-icon' %><br><%= link_to "記録する", treco_main_treco_record_path,class: 'nav-item-link' %></li>
+
+<li class="nav-item"><%= image_tag 'nav_others.png',class: 'nav-item-icon' %><br><%= link_to "その他", treco_main_treco_others_path,class: 'nav-item-link' %></li>
+</ul>
+</nav>
