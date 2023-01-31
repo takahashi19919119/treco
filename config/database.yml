@@ -66,7 +66,7 @@
   encoding: utf8
   pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout:  5000
-  username: <%= ENV["MC_DB_USERNAME"] %>
-  password: <%= ENV["MC_DB_PASSWORD"] %>
-  database: <%= ENV["MC_DATABASE"] %>
-  host:     <%= ENV["MC_DB_HOSTNAME"] %>
+  username: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  password: <%= ENV["traningrecord1991"] %>
+  database: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  host:     <%= ENV["mysql-1.mc.lolipop.lan"] %>
