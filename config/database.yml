@@ -94,8 +94,8 @@ test:
 
 production:
  <<: *default
- database: 7b2097cb95f5ee3cfd006423a9be38cf
- username: 7b2097cb95f5ee3cfd006423a9be38cf
+ database: "7b2097cb95f5ee3cfd006423a9be38cf"
+ username: "7b2097cb95f5ee3cfd006423a9be38cf"
  password: traningrecord1991
  host: mysql-1.mc.lolipop.lan
 
