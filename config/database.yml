@@ -73,10 +73,10 @@ development:
 
 ##
 
-production:
+#production:
   #<<: *default
-  adapter: mysql2
-  database: treco_rails_production
-  username: treco_rails
-  password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
+ # adapter: mysql2
+  #database: treco_rails_production
+  #username: treco_rails
+  #password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
 
