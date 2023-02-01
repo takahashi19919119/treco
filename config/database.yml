@@ -19,9 +19,21 @@
   #password:
   #socket: /tmp/mysql.sock
 
-#development:
- # <<: *default
-  #database: treco_rails_development
+  production:
+  adapter:  mysql2
+  encoding: utf8
+  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout:  5000
+  username: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  password: <%= ENV["traningrecord1991"] %>
+  database: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  host:     <%= ENV["mysql-1.mc.lolipop.lan"] %>
+
+
+##
+development:
+  <<: *default
+  database: treco_rails_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -55,18 +67,9 @@
 
 ##
 
-#production:
- # <<: *default
-  #database: treco_rails_production
-  #username: treco_rails
-  #password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
+production:
+  <<: *default
+  database: treco_rails_production
+  username: treco_rails
+  password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
 
-  production:
-  adapter:  mysql2
-  encoding: utf8
-  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout:  5000
-  username: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
-  password: <%= ENV["traningrecord1991"] %>
-  database: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
-  host:     <%= ENV["mysql-1.mc.lolipop.lan"] %>
