@@ -67,8 +67,8 @@ development:
 
 ##
 
-production:
-  <<: *default
+#production:
+  #<<: *default
   database: treco_rails_production
   username: treco_rails
   password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
