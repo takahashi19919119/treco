@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   get 'treco_main/treco_others'
   get 'user_managementse/treco_diet_main2'
 #トレーニング部位選択
-  get 'treco_diet2/treco_diet_reg'
+get 'https://trreco.lolipop.io/treco_diet2/treco_diet_reg'
+  #get 'treco_diet2/treco_diet_reg'
   get 'treco_diet2/treco_diet_hip'
   get 'treco_diet2/treco_diet_back'
   get 'treco_diet2/treco_diet_chest'
