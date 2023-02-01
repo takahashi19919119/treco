@@ -35,9 +35,9 @@ development:
 
 
 ##
-development:
+#development:
   #<<: *default
-  database: treco_rails_development
+  #database: treco_rails_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -75,6 +75,7 @@ development:
 
 production:
   #<<: *default
+  adapter: mysql2
   database: treco_rails_production
   username: treco_rails
   password: <%= ENV["TRECO_RAILS_DATABASE_PASSWORD"] %>
