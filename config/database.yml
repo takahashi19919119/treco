@@ -19,15 +19,17 @@
   #password:
   #socket: /tmp/mysql.sock
 
+
+##
   #production:
   #adapter:  mysql2
-  encoding: utf8
-  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout:  5000
-  username: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
-  password: <%= ENV["traningrecord1991"] %>
-  database: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
-  host:     <%= ENV["mysql-1.mc.lolipop.lan"] %>
+  #encoding: utf8
+  #pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  #timeout:  5000
+  #username: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  #password: <%= ENV["traningrecord1991"] %>
+  #database: <%= ENV["7b2097cb95f5ee3cfd006423a9be38cf"] %>
+  #host:     <%= ENV["mysql-1.mc.lolipop.lan"] %>
 
 
 ##
