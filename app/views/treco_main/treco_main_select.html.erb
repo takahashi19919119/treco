@@ -4,10 +4,12 @@
 
 <div id="main2_container">
 
-<%# ログイン中のユーザー名を表示する記述 %>
-<% if user_signed_in? %>
-<p>ユーザー名：<%= current_user.name %></p>
-<% end %>
+
+<%# ログイン中のユーザー名を表示する記述（コメントアウト中）%>
+<%#<% if user_signed_in? %>
+<!-- <p>ユーザー名：<%#<%= current_user.name %></p> -->
+<%#<% end %>
+
 
 <h2 class="main2_button" style="font-weight:bold;text-decoration:underline;">目的を選択してください</h2>  
 <h2 class="main2_button"><%= link_to "ダイエット 脂肪燃焼をする", treco_diet2_treco_diet_select_path  %></h2>
