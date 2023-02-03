@@ -71,6 +71,5 @@ group :test do
   gem "webdrivers"
   gem 'devise'
   gem 'simple_calendar', '~> 2.0'
-  gem 'pry-byebug', group: :development
   gem 'serviceworker-rails'
 end
