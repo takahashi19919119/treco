@@ -9,6 +9,9 @@ Rails.application.config.assets.precompile += %w(
     treco_diet_login.css
  )
 
+#PWA
+ Rails.configuration.assets.precompile += %w[serviceworker.js manifest.json]
+
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
 

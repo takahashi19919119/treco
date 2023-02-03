@@ -97,5 +97,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #PWA HTTPS対応
-   #config.force_ssl = true
+   config.force_ssl = true
 end

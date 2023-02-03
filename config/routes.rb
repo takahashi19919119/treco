@@ -92,6 +92,9 @@ Rails.application.routes.draw do
   
   resources :treco_main
   resources :treco_diet2
+
+#PWA
+  resources :manifest, only: [:index]
 end
 
 
