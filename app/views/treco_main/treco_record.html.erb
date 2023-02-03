@@ -29,14 +29,14 @@
 </h2>
 
 <h2>セット数・重量・回数
-<p>1セット目<%= form.text_field :weight_1set,class: 'content-set' %>kg<%= form.text_field :reps_1set,class: 'content-set' %>回</p>
-<p>2セット目<%= form.text_field :weight_2set,class: 'content-set' %>kg<%= form.text_field :reps_2set,class: 'content-set' %>回</p>
+<p class="record-content">1セット目<%= form.text_field :weight_1set,class: 'content-set' %>kg<%= form.text_field :reps_1set,class: 'content-set' %>回</p>
+<p class="record-content">2セット目<%= form.text_field :weight_2set,class: 'content-set' %>kg<%= form.text_field :reps_2set,class: 'content-set' %>回</p>
 
-<p>3セット目<%= form.text_field :weight_3set,class: 'content-set' %>kg<%= form.text_field :reps_3set,class: 'content-set' %>回</p>
-<p>4セット目<%= form.text_field :weight_4set,class: 'content-set' %>kg<%= form.text_field :reps_4set,class: 'content-set' %>回</p>
-<p>5セット目<%= form.text_field :weight_5set,class: 'content-set' %>kg<%= form.text_field :reps_5set,class: 'content-set' %>回</p>
-<p>6セット目<%= form.text_field :weight_6set,class: 'content-set' %>kg<%= form.text_field :reps_6set,class: 'content-set' %>回</p>
-<p>7セット目<%= form.text_field :weight_7set,class: 'content-set' %>kg<%= form.text_field :reps_7set,class: 'content-set' %>回</p></h2>
+<p class="record-content">3セット目<%= form.text_field :weight_3set,class: 'content-set' %>kg<%= form.text_field :reps_3set,class: 'content-set' %>回</p>
+<p class="record-content">4セット目<%= form.text_field :weight_4set,class: 'content-set' %>kg<%= form.text_field :reps_4set,class: 'content-set' %>回</p>
+<p class="record-content">5セット目<%= form.text_field :weight_5set,class: 'content-set' %>kg<%= form.text_field :reps_5set,class: 'content-set' %>回</p>
+<p class="record-content">6セット目<%= form.text_field :weight_6set,class: 'content-set' %>kg<%= form.text_field :reps_6set,class: 'content-set' %>回</p>
+<p class="record-content">7セット目<%= form.text_field :weight_7set,class: 'content-set' %>kg<%= form.text_field :reps_7set,class: 'content-set' %>回</p></h2>
 
 <p><%= form.submit "記録する",id: 'record-btn' %></p>
 <% end %>
