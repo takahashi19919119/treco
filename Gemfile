@@ -71,5 +71,4 @@ group :test do
   gem "webdrivers"
   gem 'devise'
   gem 'simple_calendar', '~> 2.0'
-  gem 'serviceworker-rails'
 end
