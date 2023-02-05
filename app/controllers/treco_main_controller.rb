@@ -33,7 +33,7 @@ def treco_record_list
 
     @traning = Traning.new(traning_params)
     if @traning.created_at.present?
-      @traning = Traning.where(created_at: "#{@traning.created_at}".in_time_zone.all_day).order(id: "DESC")
+      @traning = Traning.where(user_id: current_user.id).where(created_at: "#{@traning.created_at}".in_time_zone.all_day).order(id: "DESC")
     else
       @traning = Traning.none
     end
