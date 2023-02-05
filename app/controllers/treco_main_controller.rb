@@ -4,7 +4,8 @@ class TrecoMainController < ApplicationController
 ##
 
 def treco_record_list
-    @tranings = Traning.all
+    #@tranings = Traning.all
+    @tranings = Traning.where(user_id: current_user.id)
 
     #ログイン中のユーザーデーターのみ表示する記述
     #if user_signed_in?
@@ -27,7 +28,9 @@ def treco_record_list
    end
 
   def search
-    @tranings = Traning.all
+   # @tranings = Traning
+   @tranings = Traning.where(user_id: current_user.id)
+
     @traning = Traning.new(traning_params)
     if @traning.created_at.present?
       @traning = Traning.where(created_at: "#{@traning.created_at}".in_time_zone.all_day).order(id: "DESC")
