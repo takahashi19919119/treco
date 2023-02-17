@@ -69,7 +69,7 @@ Rails.application.configure do
   #パスワード再設定に関する記述
   config.action_mailer.perform_caching = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://treco.work', port: 41224 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
